@@ -1,23 +1,24 @@
 ---
 layout: post
-title:  "Automatic online documentation with Doxygen, Travis CI and GitHub Pages"
+title:  "Automatic online documentation with Doxygen, Travis CI and GitHub pages"
 categories:
 ---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 For a couple of weeks I've been putting my eveningings into developing a neural network framework in C++.
 As the project has grown I've started thinking about how usefull it would be to have an accesible documentation at hand.
 This immediatley got me thinking about doxygen, a really nice tool for generating documentation in multitude different formats directly from comments in source code.
-By combining this with the Continous Integration tool Travis CI and web hosting from GitHub Pages I set up a system that keeps an online documentation up to date with the master branch of the project.
+By combining this with the Continous Integration tool Travis CI and web hosting from GitHub pages I set up a system that keeps an online documentation up to date with the master branch of the project.
 This setup can quite easily be expanded and generalised to multiple kinds of projects hosted on GitHub.
 
 The main idea behind the system is:
 - We have a set of source files with descriptive comments
-- HTML documentation for these is generated through Doxygen
+- html documentation for these is generated through Doxygen
 - Travis CI runs Doxygen on every push
 - Documentation is saved in separate repository/branch
 - Repository/branch is served using github pages
 
 An example of this setup can be found in my [NNetCpp](https://github.com/joelnir/NNetCpp) project, with the documentation pushed to the [NNetDocs repository](https://github.com/joelnir/NNetDocs).
-This can then be reached through a [GitHub Pages website](https://joelnir.github.io/NNetDocs/).
+This can then be reached through a [GitHub pages website](https://joelnir.github.io/NNetDocs/).
 
 ### Source files
 Although this setup will help with an easy deployment of the documentation, the quality to the documentation is fully dependent on writing informative comments.
@@ -54,13 +55,13 @@ ProjectFolder/
     +- src/                     Source file directory
     +- documentation/           Documentation directory
         +- docs/                Directory for html documentation
-        +- (Documentation.pdf)  (PDF documentation, if generated)
+        +- (Documentation.pdf)  (pdf documentation, if generated)
 
 {% endhighlight %}
 
 With this setup the documentation is kept in a completely separate directory.
 This is beneficial both to keep out project top folder clean.
-It is also the `documentation` directory that we eventually want to serve using GitHub Pages.
+It is also the `documentation` directory that we eventually want to serve using GitHub pages.
 Other project structures can of course also be used by adjusting some of the paths in upcoming steps.
 
 We need to adjust some settings in our Doxygen config.
@@ -100,7 +101,7 @@ This tells Doxygen to create a html documentation. (YES is already default)
 {% highlight Text %}
 HTML_OUTPUT            = docs
 {% endhighlight %}
-Output folder of HTML documentation. The name `docs` later allows us to serve this folder specifically through GitHub Pages.
+Output folder of HTML documentation. The name `docs` later allows us to serve this folder specifically through GitHub pages.
 
 {% highlight Text %}
 GENERATE_LATEX         = NO
@@ -141,6 +142,13 @@ With this I could simply run `make docs` to generate the documentation.
 Travis CI is a Continous Integration tool that can be used freely with open source projects on GitHub.
 It is mainly used for testing and deploying builds, but can be set up to do almost anything after a push.
 In this setup we will use it to generate the documentation and then push it to a separate repository/branch.
+
+I prefer having a completely separate GitHub repository for the documentation.
+This allows both for better separation between code and docs.
+Another benefit is that since the name in the GitHub pages URL is the same as the name of the repository we can then chose it freely.
+You might prefer to deploy the documentation to the same project repository on the gh-pages branch.
+This can easily be acheived by changing some values in the Travis configuration.
+Note however that you then have to make sure that the html documentation is in the root folder for GitHub to serve it correctly.
 
 To use Travis with your project you need to authorize it for use with your project repository.
 Follow the [Getting Started](https://docs.travis-ci.com/user/getting-started/) page of the Travis CI documentation to get set up.
@@ -219,9 +227,9 @@ If not using a Makefile you could easily put it in a bash-script or simply type 
 deploy:
     provider: pages
 {% endhighlight %}
-This tells Travis that we want to deploy using GitHub Pages.
+This tells Travis that we want to deploy using GitHub pages.
 Travis has built in support for this, but it requires some setup from our side.
-For more information about deploying to GitHub Pages see the [Travis docs](https://docs.travis-ci.com/user/deployment/pages/).
+For more information about deploying to GitHub pages see the [Travis docs](https://docs.travis-ci.com/user/deployment/pages/).
 
 {% highlight YAML %}
     skip-cleanup: true
@@ -256,41 +264,101 @@ Now travis should be allowed to commit to our documentation repository.
 {% highlight YAML %}
     keep-history: true
 {% endhighlight %}
+Tells Travis to not force push, but keep the history of the repository.
 
 {% highlight YAML %}
     on:
         branch: master
 {% endhighlight %}
+Deploy when the push is to the master branch.
 
 {% highlight YAML %}
     local-dir: documentation
 {% endhighlight %}
+Select what directory to push to the documentation repository.
+With the filesystem set up as described earlier we simply want to tell travis to push the entire `documentation` directory.
 
 {% highlight YAML %}
     repo: <github-username>/<documentation-repository>
 {% endhighlight %}
+The repositry to push the documentation to. Written on the form *username/reponame*.
 
 {% highlight YAML %}
     target-branch: master
 {% endhighlight %}
+The branch to push to on the documentation repository.
+
+With this set up we can then push to our master branch and Travis will start a new job.
+Travis will generate the documentation and then push it to the documentation repository.
+If the Travis build fails make sure to check the log file.
+From the log it should be clear what went wrong.
 
 ### GitHub Pages
+Now we have our documentatin in a repository ready to go.
+We only have to tell GitHub to start serving it using GitHub pages.
 
-### PDF through \LaTeX
-
-### Customizations
-
-
-travis:
-    token
-doxygen config
-    documentation dir
-    docs for html
-
-*explain dir structure*
+In the documentation repository, go to the settings tab.
+Scroll down to GitHub pages and select source *master branch /docs folder*.
+This is the reason why we chose the name `docs` for the html documentation directory in the Doxygen config.
 
 <div style="text-align: center; margin: 20px 0px;">
-    <img src="/assets/dependency_graph.png" width="400px" style="margin: auto">
-    <p>Example of npm dependencies modeled as directed graph</p>
+    <img src="/assets/gh_pages.png" style="margin: auto">
+    <p>GitHub pages set up to serve to /docs directory from the master branch</p>
 </div>
 
+Wait for a second and your documentation should be available at `<github-username>.github.io/<repository-name>`.
+Now you have a finished sytem that will update the documentation after each push to the master branch.
+
+Everything should work as expected at this point, but once everything is set up we can expand on the system in different ways.
+
+### PDF from $$\LaTeX$$
+One thing that could be nice is to also include the documentation as a pdf file in the documenatation repository.
+This can be achieved by configuring Doxygen to output in LaTeX format and then using a LaTeX compiler to create a pdf file.
+
+The only change needed in the Doxygen config is:
+{% highlight Text %}
+GENERATE_LATEX         = YES
+{% endhighlight %}
+This tells Doxygen to generate a LaTeX documentation in the `latex` directory.
+
+For compiling this documentation we need a LaTeX compiler and some extra packages.
+A common one is TeX Live, easiest installed on debian systems with
+{% highlight Bash %}
+sudo apt-get install texlive texlive-latex-extra
+{% endhighlight %}
+
+We can now look at the pdf documentation by running
+{% highlight Bash %}
+doxygen doxygen.conf
+cd documentation/latex
+make
+{% endhighlight %}
+This should create the file `refman.pdf` in the latex folder if everything works as intended.
+
+To automate this process and make sure that the pdf is pushed to our documentation repository we need to put this in a script.
+Once we are done with the LaTeX files they are unneccesary and should be deleted.
+I edited my Makefile to create the pdf, move it out of the latex folder and delete it.
+{% highlight Makefile %}
+.PHONY: docs
+
+docs:
+	doxygen doxygen.conf
+	cd documentation/latex && make
+	mv documentation/latex/refman.pdf documentation/Documentation.pdf
+	rm -r documentation/latex
+{% endhighlight %}
+
+With this in the same Makefile command as before we don't have to adjust the Travis condif much.
+The only neccesary change to `.travis.yml` is the addition of the LaTeX packages.
+
+{% highlight YAML %}
+before_install:
+      - sudo apt-get update
+      - sudo apt-get install -y doxygen texlive texlive-latex-extra
+{% endhighlight %}
+
+Now Travis will also create a pdf documentation for you.
+The file `Documentation.pdf` can be found in the root of the documentation repository.
+
+There are many other ways to adapt and expand on this setup for the needs of different projects.
+If you have any questions, ideas for improvements or cool use-cases feel free to reach out on [twitter](https://www.twitter.com/joel_oskarsson) or [email](mailto:joel.oskarsson@outlook.com).

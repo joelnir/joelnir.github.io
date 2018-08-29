@@ -12,6 +12,9 @@ I am an avid Linux user and a strong believer in free and open source software. 
 <br>
 Even though I have always been a full time student I have had some work experiences more or less related to my fields of interest. Some of the most interesting has been working as a course assistant at the University. I've worked with seminars, lessons and assignments for courses in mathematics and computer science. I find teaching very rewarding since it both allows you to further cement your own knowledge within an area as well as seeing the students approve and appreciate new knowledge.
 
+[CV (English)](https://joelnir.github.io/CV/CV_english.pdf)<br>
+[CV (Swedish)](https://joelnir.github.io/CV/CV_swedish.pdf)
+
 ### Current interests
 These are some things that I am interested in and/or work on at the moment. I try to keep this as up to date as possible.
 

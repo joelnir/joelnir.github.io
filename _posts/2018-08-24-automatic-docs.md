@@ -63,7 +63,7 @@ ProjectFolder/
 {% endhighlight %}
 
 With this setup the documentation is kept in a completely separate directory.
-This is beneficial to keep out project top folder clean.
+This is beneficial to keep our project top folder clean.
 It is also the `documentation` directory that we eventually want to serve using GitHub pages.
 Other project structures can of course also be used by adjusting some of the paths in upcoming steps.
 

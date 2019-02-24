@@ -14,8 +14,8 @@ Even though I have always been a full time student I have had some work experien
 
 I am currently pursuing the first year of my masters as an exchange student at ETH Zurich. I am living in Zurich, Switzerland until august 2019.
 
-[CV (English)](https://joelnir.github.io/CV/CV_english.pdf)<br>
-[CV (Swedish)](https://joelnir.github.io/CV/CV_swedish.pdf)
+[CV (English)](https://joeloskarsson.github.io/CV/CV_english.pdf)<br>
+[CV (Swedish)](https://joeloskarsson.github.io/CV/CV_swedish.pdf)
 
 ### Current interests
 These are some things that I am interested in and/or work on at the moment. I try to keep this as up to date as possible.
@@ -24,7 +24,7 @@ These are some things that I am interested in and/or work on at the moment. I tr
     * Reliability
     * Interpretability (explainable and/or visualized decision processes)
     * Adversarial example attacks and defenses
-* Efforts in unifying data-driven and reasoning approaches to AI
+* Deep reinforcement learning
 * Information security
 * GNSS positioning
 

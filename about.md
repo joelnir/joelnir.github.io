@@ -21,14 +21,14 @@ I am currently pursuing the first year of my masters as an exchange student at E
 These are some things that I am interested in and/or work on at the moment. I try to keep this as up to date as possible.
 
 * Safe and Secure AI
+    * Adversarial example attacks and defenses
     * Reliability
     * Interpretability (explainable and/or visualized decision processes)
-    * Adversarial example attacks and defenses
-* Deep reinforcement learning
-* Information security
-* GNSS positioning
+* Reinforcement learning
+* Innovative deep learning architectures and applications
+* Computational statistics
 
-(updated 01-12-2018)
+(updated 17-04-2019)
 
 ### Papers and reports
 **Real-time Multiplayer Game on IoT-backend**, Bachelor thesis, Linköping University, 2018, 7 co-authors, Swedish, [link](http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-149042), also features individual written chapter:

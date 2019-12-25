@@ -16,7 +16,7 @@
 title: Joel Oskarsson
 email: joel.oskarsson@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Swedish computer science student with interests in AI and Machine Learning. See "About Me" for more info.
+  Swedish computer science student interested in Machine Learning and AI. See "About Me" for more info.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: joel_oskarsson

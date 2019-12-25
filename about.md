@@ -4,31 +4,32 @@ title: About Me
 permalink: /about/
 ---
 
-<img src="/assets/me.jpg" width="200" style="float: left; padding-right: 15px;">
-I grew up in the fairly small Swedish town of Lindesberg, but moved to Linköping to study at 18. I study computer science and engineering at Linköping University, currently doing my master with a focus on AI and machine learning.
+<img src="/assets/me.jpg" width="200" style="float: left; padding-right: 15px; padding-bottom: 30px;">
+I grew up in Lindesberg, Sweden and moved to Linköping to study at 18. I study computer science and engineering at Linköping University, currently doing my master with a focus on machine learning.
 
-I am an avid Linux user and a strong believer in free and open source software. I like DIY ideas both in general and for software. Openness of ideas, culture and research is very important to me.
+Throughout my time in Linköping I have had some work experience both in industry and helping out with teaching at the university.
+I find teaching very rewarding and meaningful.
 
-<br>
-Even though I have always been a full time student I have had some work experiences more or less related to my fields of interest. Some of the most interesting has been working as a course assistant at the University. I've worked with seminars, lessons and assignments for courses in mathematics and computer science. I find teaching very rewarding since it both allows you to further cement your own knowledge within an area as well as seeing the students approve and appreciate new knowledge.
+In 2018-2019 I spent a year as an exchange student at ETH Zurich, Switzerland.
+This time was very valuable for me and offered a many new insights.
 
-I am currently pursuing the first year of my masters as an exchange student at ETH Zurich. I am living in Zurich, Switzerland until august 2019.
+I am an avid Linux user and a strong believer in free and open source software. Openness of ideas, culture and research is very important to me.
+
+I am currently working on my master thesis at the Division of Statistics and Machine Learning at Linköping University.
 
 [CV (English)](https://joeloskarsson.github.io/CV/CV_english.pdf)<br>
 [CV (Swedish)](https://joeloskarsson.github.io/CV/CV_swedish.pdf)
 
 ### Current interests
-These are some things that I am interested in and/or work on at the moment. I try to keep this as up to date as possible.
+These are some things that I am interested in and/or work on at the moment. I try to keep this somewhat up to date.
 
+* GANs
+* Reinforcement learning
 * Safe and Secure AI
     * Adversarial example attacks and defenses
-    * Reliability
-    * Interpretability (explainable and/or visualized decision processes)
-* Reinforcement learning
-* Innovative deep learning architectures and applications
-* Computational statistics
+    * Interpretability, explainability
 
-(updated 17-04-2019)
+(updated 25-12-2019)
 
 ### Papers and reports
 **Real-time Multiplayer Game on IoT-backend**, Bachelor thesis, Linköping University, 2018, 7 co-authors, Swedish, [link](http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-149042), also features individual written chapter:
@@ -38,7 +39,5 @@ These are some things that I am interested in and/or work on at the moment. I tr
 ### Contact & links
 * [Personal email](mailto:joel.oskarsson@outlook.com)
 * [Linköping University email](mailto:joeos014@student.liu.se)
-* [ETH Zurich email](mailto:ojoel@student.ethz.ch)
 * [LinkedIn](https://linkedin.com/in/joel-oskarsson/)
-* [Twitter (mainly professional)](https://twitter.com/joel_oskarsson)
-* [Github](https://github.com/joelnir)
+* [Github](https://github.com/joeloskarsson)

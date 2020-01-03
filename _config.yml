@@ -25,9 +25,9 @@ linkedin_username: joel-oskarsson
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+#theme: minima
+#plugins:
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -42,3 +42,14 @@ plugins:
 #   - vendor/ruby/
 
 permalink: :year/:title
+
+# Tale theme
+remote_theme: chesterhow/tale
+
+#permalink:    /:year-:month-:day/:title
+paginate:     10
+
+plugins:
+    - jekyll-paginate
+    - jekyll-remote-theme
+    - jekyll-feed

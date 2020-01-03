@@ -2,6 +2,7 @@
 layout: post
 title:  "Gridworld Sandbox for Reinforcement Learning"
 date:   2019-02-24 11:05:00 +0200
+author: Joel Oskarsson
 categories: ai, machine learning, reinforcement learning
 ---
 
@@ -11,7 +12,7 @@ This project is a small application written in Python 3 that simulates a gridwor
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="https://raw.githubusercontent.com/joeloskarsson/rl-gridworld/master/screenshots/screenshot0.png" width="800px" style="margin: auto">
-    <p>Screenshot of gridworld environment</p>
+    <span>Screenshot of gridworld environment</span>
 </div>
 
 The GUI was written in [PyQt](https://wiki.python.org/moin/PyQt), a library that I haven't worked with before. I have some bad experiences with python GUI libraries (read Tkinter), but I have to say that working with PyQt was really smooth. Qt is a powerful toolkit and PyQt has shown to be a quite accessible binding. I had a really easy time to get up and running and make the GUI look how I wanted, so PyQt will definitely be my go to Python GUI library for future projects.

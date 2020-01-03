@@ -1,10 +1,11 @@
 ---
-layout: page
+layout: post
 title: About Me
+author: Joel Oskarsson
 permalink: /about/
 ---
 
-<img src="/assets/me.jpg" width="200" style="float: left; padding-right: 15px; padding-bottom: 30px;">
+<img src="/assets/me.jpg" width="250" style="float: left; padding-right: 15px; padding-bottom: 30px;">
 I grew up in Lindesberg, Sweden and moved to Linköping to study at 18. I study computer science and engineering at Linköping University, currently doing my master with a focus on machine learning.
 
 Throughout my time in Linköping I have had some work experience both in industry and helping out with teaching at the university.

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Joel Oskarsson
 title:  "Machine Learning for Transport Mode Classification"
 date:   2019-02-03 18:28:00 +0200
 categories: ai, machine learning
@@ -77,7 +78,7 @@ The features used were:
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/scatter.svg" width="800px" style="margin: auto">
-    <p>Scatter plots of some of the features</p>
+    <span>Scatter plots of some of the features</span>
 </div>
 
 My workflow was based in two Python scripts. One for extracting features and one to  validate models.
@@ -109,7 +110,7 @@ Models exist as part of bigger systems and making a model work together with oth
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/ecofootprint.png" width="300px" style="margin: auto">
-    <p>Screenshot of the final app</p>
+    <span>Screenshot of the final app</span>
 </div>
 
 There are a couple related problems that we avoided tackling thoroughly in this project.

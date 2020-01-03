@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Switzerland"
+author: Joel Oskarsson
 date:   2018-09-07 21:33:00 +0200
 categories: life
 ---
@@ -13,9 +14,10 @@ Next week I'll be taking part in a project called [ETH Week](https://www.ethz.ch
 It's cross-disciplinary one week project and this years theme is "Energy Matters".
 
 <div style="text-align: center; margin: 20px 0px;">
-    <img src="/assets/goodbye_liu.jpg" width="300px" style="margin: auto">
-    <img src="/assets/hello_eth.jpg" width="300px" style="margin: auto">
-    <p>Hej då Linköping, Guten Tag Zürich</p>
+    <img src="/assets/goodbye_liu.jpg" width="300px" style="margin: auto; display: inline">
+    <img src="/assets/hello_eth.jpg" width="300px" style="margin: auto; display: inline">
+    <br>
+    <span>Hej då Linköping, Guten Tag Zürich</span>
 </div>
 
 Courses will then begin on the 17th September. I'll mostly be doing courses related to AI in different ways.

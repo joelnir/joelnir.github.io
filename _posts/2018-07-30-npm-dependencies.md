@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "An analysis of dependencies to software packages in open source JavaScript projects"
+author: Joel Oskarsson
 date:   2018-07-30 21:57:00 +0200
 categories: paper javascript npm
 ---
@@ -35,7 +36,7 @@ All nodes reachable from the original project can be considered indirect depende
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/dependency_graph.png" width="400px" style="margin: auto">
-    <p>Example of npm dependencies modeled as directed graph</p>
+    <span>Example of npm dependencies modeled as directed graph</span>
 </div>
 
 Npm classifies dependencies in two different groups, *dependencies* and *dev-dependencies*.
@@ -52,7 +53,7 @@ For storing all the data an SQLite database was used, as can be seen below.
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/npm_db.png" style="margin: auto">
-    <p>Database used in analysis</p>
+    <span>Database used in analysis</span>
 </div>
 
 This database can be seen as storing the directed graph model representing dependencies between packages.
@@ -66,12 +67,12 @@ The three statistics that were concluded from this data are direct dependencies,
 Let's first take a look at direct dependencies. (Axis label translation: x-axis - Direct dependencies, y-axis - Projects)
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/direct_dep.png" width="500px" style="margin: auto">
-    <p>Direct dependencies</p>
+    <span>Direct dependencies</span>
 </div>
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/direct_dep_dev.png" width="500px" style="margin: auto">
-    <p>Direct dev-dependencies</p>
+    <span>Direct dev-dependencies</span>
 </div>
 
 It is clear that a majority of the analysed JavaScript projects have only a few dependencies.
@@ -84,12 +85,12 @@ Do keep in mind different scalings of the y-axis when comparing graphs.
 Following the dependencies of packages we get data on the amounts of indirect dependencies. (Axis label translation: x-axis - Indirect dependencies, y-axis - Projects)
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/indirect_dep.png" width="500px" style="margin: auto">
-    <p>Indirect dependencies</p>
+    <span>Indirect dependencies</span>
 </div>
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/indirect_dep_dev.png" width="500px" style="margin: auto">
-    <p>Indirect dev-dependencies</p>
+    <span>Indirect dev-dependencies</span>
 </div>
 
 For indirect dependencies we can see a similar pattern as direct with the majority of projects depending on only a few packages.
@@ -104,12 +105,12 @@ This might give an idea of how easy it is for the developer to understand what d
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/dep_depth.png" width="500px" style="margin: auto">
-    <p>Dependency depth</p>
+    <span>Dependency depth</span>
 </div>
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/dep_depth_dev.png" width="500px" style="margin: auto">
-    <p>Dev-dependency depth</p>
+    <span>Dev-dependency depth</span>
 </div>
 
 Here we can see the projects missing dependencies with 0 depth.

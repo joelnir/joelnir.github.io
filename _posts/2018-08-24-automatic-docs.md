@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Automatic online documentation for GitHub projects using Doxygen, Travis CI and GitHub pages"
+author: Joel Oskarsson
 date:   2018-08-24 16:47:00 +0200
 categories: ci documentation continuous-integration github makefile
 ---
@@ -251,7 +252,7 @@ If the repository you want to deploy to is public you only need the *public_repo
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/access_token.png" style="margin: auto">
-    <p>Generating a new personal access token</p>
+    <span>Generating a new personal access token</span>
 </div>
 
 Copy this token and go to the Travis CI repository settings for you project repository.
@@ -259,7 +260,7 @@ Create a new environment variable named `GITHUB_TOKEN` and set the value to your
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/travis_var.png" style="margin: auto">
-    <p>GITHUB_TOKEN environment variable in Travis repository settings</p>
+    <span>GITHUB_TOKEN environment variable in Travis repository settings</span>
 </div>
 
 Now Travis should be allowed to commit to our documentation repository.
@@ -306,7 +307,7 @@ This is the reason why we chose the name `docs` for the html documentation direc
 
 <div style="text-align: center; margin: 20px 0px;">
     <img src="/assets/gh_pages.png" style="margin: auto">
-    <p>GitHub pages set up to serve to /docs directory from the master branch</p>
+    <span>GitHub pages set up to serve to /docs directory from the master branch</span>
 </div>
 
 Wait for a second and your documentation should be available at `<github-username>.github.io/<repository-name>`.

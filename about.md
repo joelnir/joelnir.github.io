@@ -12,9 +12,9 @@ Throughout my time in Linköping I have had some work experience both in industr
 I find teaching very rewarding and meaningful.
 
 In 2018-2019 I spent a year as an exchange student at ETH Zurich, Switzerland.
-This time was very valuable for me and offered a many new insights.
+This time was very valuable for me and offered many new insights.
 
-I am an avid Linux user and a strong believer in free and open source software. Openness of ideas, culture and research is very important to me.
+I am an avid Linux user and a believer in free and open source software. Openness of ideas, culture and research is very important to me.
 
 I am currently working on my master thesis at the Division of Statistics and Machine Learning at Linköping University.
 
